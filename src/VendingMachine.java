@@ -15,12 +15,13 @@ public class VendingMachine {
         System.out.println("What item do you want to add?");
         int snackChoice = scan.nextInt();
         Snack newSnack = new Snack(snackChoice);
-        order.add(snackChoice);
+        order.add(newSnack);
         total += newSnack.getCost();
 
         System.out.println("Do you want to add another item? (Type 'y' for yes or 'n' for no)");
         Scanner scanner = new Scanner(System.in);
         char yesno = scanner.next().charAt(0);
+        
         
         while (orderRunning) {
             System.out.println("What item do you want to add?");
@@ -38,10 +39,6 @@ public class VendingMachine {
 
 
         //if(!orderRunning) {
-            System.out.println("\n Your order is: ");
-            for (int count = 0; count < order.size(); count++) {
-                System.out.println(order.get(count));
-            }
             System.out.println("Total: " + total);
             System.out.println("Would you like to abort your purchase? (Type 'y' for yes or 'n' for no)");
             char quit = scanner.next().charAt(0);
