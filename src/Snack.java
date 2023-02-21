@@ -23,4 +23,10 @@ public class Snack {
             cost = 3.50;
         }
     }
+    public double getCost() {
+        return this.cost;
+    }
+    public String getName() {
+        return this.name;
+    }
 }
